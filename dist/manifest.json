@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
     "name": "自由跳转",
-    "description": "外链自由跳转",
+    "description": "微博，知乎，简书等网站外链自由跳转",
     "version": "1.0.0",
     "browser_action": {
-        "default_icon": "icon-16.png",
+        "default_icon": "icon16.png",
         "default_popup": "popup.html"
     },
     "background": {
@@ -12,9 +12,10 @@
         "persistent": false
     },
     "icons": {
-        "16": "icon-16.png",
-        "48": "icon-48.png",
-        "128": "icon-128.png"
+        "16": "icon16.png",
+        "19": "icon19.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
     },
     "content_scripts": [
         {
@@ -34,5 +35,5 @@
             "js": ["js/weibo.js"]
         }
     ],
-    "permissions": ["tabs", "activeTab", "notifications", "http://*/", "https://*/", "webNavigation", "http://api.t.sina.com.cn/*"]
+    "permissions": ["tabs", "activeTab", "notifications", "webNavigation", "http://api.t.sina.com.cn/*"]
 }
