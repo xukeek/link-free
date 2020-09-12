@@ -6,6 +6,7 @@ module.exports = {
         contentScript: path.join(__dirname, "src/contentScript.ts"),
         zhihu: path.join(__dirname, "src/zhihu.ts"),
         jianshu: path.join(__dirname, "src/jianshu.ts"),
+        weibo: path.join(__dirname, "src/weibo.ts"),
         popup: path.join(__dirname, "src/popup/index.tsx"),
         box: path.join(__dirname, "src/box/index.tsx"),
     },

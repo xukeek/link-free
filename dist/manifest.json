@@ -28,7 +28,11 @@
         {
             "matches": ["https://www.jianshu.com/*"],
             "js": ["js/jianshu.js"]
+        },
+        {
+            "matches": ["https://weibo.com/*"],
+            "js": ["js/weibo.js"]
         }
     ],
-    "permissions": ["tabs", "activeTab", "notifications", "http://*/", "https://*/", "webNavigation"]
+    "permissions": ["tabs", "activeTab", "notifications", "http://*/", "https://*/", "webNavigation", "http://api.t.sina.com.cn/*"]
 }
