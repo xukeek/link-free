@@ -1,23 +1,13 @@
-function replaceLinks(root: ParentNode): void {
-    const links = root.querySelectorAll('a[href*="link.zhihu.com/?target="]');
-    for (let i = 0; i < links.length; i++) {
-        const link = links[i];
-        const href = link.getAttribute("href");
-        if (href != null) {
-            link.setAttribute(
-                "href",
-                decodeURIComponent(href.split("target=")[1]),
-            );
-        }
-    }
-}
+import { replaceLinks } from "@src/utils";
+import { Patterns, Splitors } from "@src/constants/patterns";
 
-replaceLinks(document);
+replaceLinks(document, Patterns.ZHI_HU, Splitors.ZHI_HU);
+
 const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
         mutation.addedNodes.forEach(node => {
             if (node.hasChildNodes()) {
-                replaceLinks(node as HTMLElement);
+                replaceLinks(node as HTMLElement, Patterns.ZHI_HU, Splitors.JIAN_SHU);
             }
         });
     });

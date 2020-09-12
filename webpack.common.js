@@ -5,6 +5,7 @@ module.exports = {
         backgroundPage: path.join(__dirname, "src/backgroundPage.ts"),
         contentScript: path.join(__dirname, "src/contentScript.ts"),
         zhihu: path.join(__dirname, "src/zhihu.ts"),
+        jianshu: path.join(__dirname, "src/jianshu.ts"),
         popup: path.join(__dirname, "src/popup/index.tsx"),
         box: path.join(__dirname, "src/box/index.tsx"),
     },
