@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Chrome Extension Starter",
-    "description": "A Chrome Extension starter kit",
+    "name": "自由跳转",
+    "description": "外链自由跳转",
     "version": "1.0.0",
     "browser_action": {
         "default_icon": "icon-16.png",
@@ -16,13 +16,14 @@
         "48": "icon-48.png",
         "128": "icon-128.png"
     },
-    "chrome_url_overrides" : {
-        "newtab": "box.html"
-    },
     "content_scripts": [
         {
             "matches": ["http://t.cn/*"],
             "js": ["js/contentScript.js"]
+        },
+        {
+            "matches": ["https://www.zhihu.com/*"],
+            "js": ["js/zhihu.js"]
         }
     ],
     "permissions": ["tabs", "activeTab", "notifications", "http://*/", "https://*/", "webNavigation"]
