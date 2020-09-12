@@ -19,5 +19,11 @@
     "chrome_url_overrides" : {
         "newtab": "box.html"
     },
-    "permissions": ["tabs", "activeTab", "notifications", "http://*/", "https://*/"]
+    "content_scripts": [
+        {
+            "matches": ["http://t.cn/*"],
+            "js": ["js/contentScript.js"]
+        }
+    ],
+    "permissions": ["tabs", "activeTab", "notifications", "http://*/", "https://*/", "webNavigation"]
 }

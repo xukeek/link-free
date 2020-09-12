@@ -8,3 +8,7 @@ browser.runtime.onMessage.addListener((request: { popupMounted: boolean }) => {
         console.log("backgroundPage notified that Popup.tsx has mounted.");
     }
 });
+
+browser.webNavigation.onDOMContentLoaded.addListener((object: any) => {
+    console.log(object);
+});

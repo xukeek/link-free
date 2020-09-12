@@ -4,8 +4,6 @@ import { browser } from "webextension-polyfill-ts";
 import { Scroller } from "@src/components/scroller";
 import "./styles.scss";
 
-// // // //
-
 export const Popup: FunctionComponent = () => {
     // Sends the `popupMounted` event
     React.useEffect(() => {
