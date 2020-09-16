@@ -24,7 +24,3 @@ browser.runtime.onMessage.addListener(
         });
     },
 );
-
-browser.webNavigation.onDOMContentLoaded.addListener((object: any) => {
-    console.log(object);
-});
