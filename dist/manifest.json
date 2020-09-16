@@ -35,5 +35,5 @@
             "js": ["js/weibo.js"]
         }
     ],
-    "permissions": ["tabs", "activeTab", "notifications", "webNavigation", "http://api.t.sina.com.cn/*"]
+    "permissions": ["tabs", "activeTab", "notifications", "webNavigation", "http://api.t.sina.com.cn/*", "storage"]
 }

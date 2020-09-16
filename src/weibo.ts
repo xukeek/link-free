@@ -1,5 +1,6 @@
 import { browser } from "webextension-polyfill-ts";
-import { Patterns } from "@src/constants/patterns";
+import {Patterns, SiteKeys, Splitters} from "@src/constants/patterns";
+import {monitor} from "@src/utils";
 
 const URL_CACHE = new Map();
 
@@ -47,9 +48,14 @@ browser.runtime.onMessage.addListener(
     },
 );
 
-replaceLinks();
-new MutationObserver(mutations => {
-    mutations.forEach(() => {
+browser.storage.sync.get([SiteKeys.WEI_BO]).then(s => {
+    const config = s[SiteKeys.WEI_BO];
+    if (config === undefined || config) {
         replaceLinks();
-    });
-}).observe(document, { childList: true, subtree: true });
+        new MutationObserver(mutations => {
+            mutations.forEach(() => {
+                replaceLinks();
+            });
+        }).observe(document, { childList: true, subtree: true });
+    }
+});
