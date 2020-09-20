@@ -23,7 +23,7 @@
             "js": ["js/contentScript.js"]
         },
         {
-            "matches": ["https://www.zhihu.com/*"],
+            "matches": ["https://*.zhihu.com/*"],
             "js": ["js/zhihu.js"]
         },
         {
