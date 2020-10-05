@@ -1,4 +1,6 @@
 dist/js/*
+dist/*.png
+dist/manifest.json
 .vscode
 storybook-static/*
 

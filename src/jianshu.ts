@@ -1,5 +1,5 @@
-import { monitor } from '@src/utils';
-import { Patterns, Splitters, SiteKeys } from '@src/constants/patterns';
+import { monitor } from '@/utils';
+import { Patterns, Splitters, SiteKeys } from '@/constants/patterns';
 import { browser } from 'webextension-polyfill-ts';
 
 browser.storage.sync.get([SiteKeys.JIAN_SHU]).then(s => {

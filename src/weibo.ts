@@ -1,6 +1,6 @@
 import { browser } from 'webextension-polyfill-ts';
-import { Patterns, SiteKeys, Splitters } from '@src/constants/patterns';
-import { monitor } from '@src/utils';
+import { Patterns, SiteKeys, Splitters } from '@/constants/patterns';
+import { monitor } from '@/utils';
 
 const URL_CACHE = new Map();
 

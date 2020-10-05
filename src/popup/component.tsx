@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
-import '@src/scss/app.scss';
+import '@/scss/app.scss';
 import { browser } from 'webextension-polyfill-ts';
-import { Site, SITE_LIST } from '@src/constants/patterns';
+import { Site, SITE_LIST } from '@/constants/patterns';
 
 interface SiteProps {
     site: Site;

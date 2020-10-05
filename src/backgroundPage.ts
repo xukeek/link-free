@@ -1,4 +1,5 @@
 import { browser, Runtime } from 'webextension-polyfill-ts';
+import { version } from '@/manifest.json';
 import MessageSender = Runtime.MessageSender;
 
 // Listen for messages sent from other parts of the extension
@@ -19,4 +20,29 @@ browser.runtime.onMessage.addListener((r: { urls: string[] }, req: MessageSender
                 reject();
             });
     });
+});
+
+/**
+ * @summary 插件第一次安装时设置初始值
+ */
+browser.runtime.onInstalled.addListener(reason => {
+    if (reason.reason !== 'update') {
+    } else {
+        browser.notifications
+            .clear('updateInfo')
+            .then(() => {
+                browser.notifications
+                    .create('updateInfo', {
+                        type: 'basic',
+                        iconUrl: '',
+                        title: `${version} 更新：`,
+                        message: require('@/changelog.json')[version] || '点击查看更新内容',
+                        priority: 2,
+                        eventTime: Date.now() + 100000,
+                    })
+                    .then(r => console.log(r))
+                    .catch(e => console.log(e));
+            })
+            .catch(r => console.log(r));
+    }
 });

@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "自由跳转",
     "description": "微博，知乎，简书等网站外链自由跳转",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "browser_action": {
         "default_icon": "icon16.png",
         "default_popup": "popup.html"
@@ -38,5 +38,5 @@
             "js": ["js/youtube.js"]
         }
     ],
-    "permissions": ["http://api.t.sina.com.cn/*", "storage"]
+    "permissions": ["http://api.t.sina.com.cn/*", "storage", "notifications"]
 }
