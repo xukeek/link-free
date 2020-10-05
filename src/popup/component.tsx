@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import '@/scss/app.scss';
+import './styles.scss';
 import { browser } from 'webextension-polyfill-ts';
 import { Site, SITE_LIST } from '@/constants/patterns';
 
@@ -24,7 +25,7 @@ const SiteOption: FunctionComponent<SiteProps> = (props: SiteProps) => {
     }, [checked]);
 
     return (
-        <span className="inline-block text-gray-700 text-center bg-gray-400 px-4 py-2">
+        <span className="flex text-gray-700 text-center bg-gray-400 px-4 py-2">
             {props.site.name}
             <input
                 type="checkbox"
@@ -40,7 +41,7 @@ const SiteOption: FunctionComponent<SiteProps> = (props: SiteProps) => {
 export const Popup: FunctionComponent = () => {
     // Renders the component tree
     return (
-        <div className="container">
+        <div className="container popup-container">
             <div className="bg-gray-200 p-4">
                 {SITE_LIST.map(k => (
                     <SiteOption site={k} key={k.key} />
