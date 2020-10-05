@@ -17,8 +17,7 @@
         "48": "icon48.png",
         "128": "icon128.png"
     },
-    "content_scripts": [
-        {
+    "content_scripts": [{
             "matches": ["http://t.cn/*"],
             "js": ["js/contentScript.js"]
         },
@@ -33,6 +32,10 @@
         {
             "matches": ["https://weibo.com/*"],
             "js": ["js/weibo.js"]
+        },
+        {
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["js/youtube.js"]
         }
     ],
     "permissions": ["http://api.t.sina.com.cn/*", "storage"]

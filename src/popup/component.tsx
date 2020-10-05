@@ -1,7 +1,7 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
-import "@src/scss/app.scss";
-import { browser } from "webextension-polyfill-ts";
-import { Site, SITE_LIST } from "@src/constants/patterns";
+import React, { FunctionComponent, useEffect, useState } from 'react';
+import '@src/scss/app.scss';
+import { browser } from 'webextension-polyfill-ts';
+import { Site, SITE_LIST } from '@src/constants/patterns';
 
 interface SiteProps {
     site: Site;
@@ -19,9 +19,7 @@ const SiteOption: FunctionComponent<SiteProps> = (props: SiteProps) => {
     }, [a]);
     useEffect(() => {
         if (a) {
-            browser.storage.sync
-                .set({ [props.site.key]: checked })
-                .then(s => console.log(s));
+            browser.storage.sync.set({ [props.site.key]: checked }).then(s => console.log(s));
         }
     }, [checked]);
 

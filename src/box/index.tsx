@@ -1,11 +1,11 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { browser } from "webextension-polyfill-ts";
-import "../scss/app.scss";
-import { Popup } from "./component";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { browser } from 'webextension-polyfill-ts';
+import '../scss/app.scss';
+import { Popup } from './component';
 
 // // // //
 
 browser.tabs.query({ active: true, currentWindow: true }).then(() => {
-    ReactDOM.render(<Popup />, document.getElementById("box"));
+    ReactDOM.render(<Popup />, document.getElementById('box'));
 });

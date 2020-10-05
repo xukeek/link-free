@@ -7,6 +7,7 @@ module.exports = {
         zhihu: path.join(__dirname, "src/zhihu.ts"),
         jianshu: path.join(__dirname, "src/jianshu.ts"),
         weibo: path.join(__dirname, "src/weibo.ts"),
+        youtube: path.join(__dirname, "src/youtube.ts"),
         popup: path.join(__dirname, "src/popup/index.tsx"),
         box: path.join(__dirname, "src/box/index.tsx"),
     },
@@ -15,8 +16,7 @@ module.exports = {
         filename: "[name].js",
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 exclude: /node_modules/,
                 test: /\.tsx?$/,
                 use: "ts-loader",
@@ -24,8 +24,7 @@ module.exports = {
             {
                 exclude: /node_modules/,
                 test: /\.scss$/,
-                use: [
-                    {
+                use: [{
                         loader: "style-loader", // Creates style nodes from JS strings
                     },
                     {

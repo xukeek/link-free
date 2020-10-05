@@ -5,14 +5,14 @@ export enum Patterns {
 }
 
 export enum Splitters {
-    ZHI_HU = "?target=",
-    JIAN_SHU = "?t=",
+    ZHI_HU = '?target=',
+    JIAN_SHU = '?t=',
 }
 
 export enum SiteKeys {
-    ZHI_HU = "zhihu",
-    JIAN_SHU = "jianshu",
-    WEI_BO = "weibo",
+    ZHI_HU = 'zhihu',
+    JIAN_SHU = 'jianshu',
+    WEI_BO = 'weibo',
 }
 
 export class Site {
@@ -25,9 +25,8 @@ export class Site {
     }
 }
 
-
 export const SITE_LIST = [
-    new Site("知乎", SiteKeys.ZHI_HU),
-    new Site("新浪微博", SiteKeys.JIAN_SHU),
-    new Site("简书", SiteKeys.WEI_BO),
+    new Site('知乎', SiteKeys.ZHI_HU),
+    new Site('新浪微博', SiteKeys.JIAN_SHU),
+    new Site('简书', SiteKeys.WEI_BO),
 ];
