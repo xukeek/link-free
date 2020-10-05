@@ -34,7 +34,7 @@ browser.runtime.onInstalled.addListener(reason => {
                 browser.notifications
                     .create('updateInfo', {
                         type: 'basic',
-                        iconUrl: '',
+                        iconUrl: browser.runtime.getURL('icon38.png'),
                         title: `${version} 更新：`,
                         message: require('@/changelog.json')[version] || '点击查看更新内容',
                         priority: 2,
